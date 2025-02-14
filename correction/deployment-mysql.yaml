@@ -1,7 +1,3 @@
-#############
-##A COMPLETER
-############
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -22,4 +18,16 @@ spec:
       - name: mysql
         image: harbor.kakor.ovh/public/mysql:latest
         ports:
-        - containerPort: 80
+        - containerPort: 3306
+        env:
+        - name: MYSQL_DATABASE
+          value: mediawiki
+        - name: MYSQL_USER
+          value: mediawiki
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: password-mysql
+              key: password
+        - name: MYSQL_ROOT_PASSWORD
+          value: "B4teau123!"
