@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mediawiki-deployment
+  labels:
+    app: mediawiki
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mediawiki
+  template:
+    metadata:
+      labels:
+        app: mediawiki
+    spec:
+      containers:
+      - name: mediawiki
+        image: harbor.kakor.ovh/public/mediawiki:latest
+        ports:
+        - containerPort: 80
+        env:
+          - name: MEDIAWIKI_DB_NAME
+            value: mediawiki
+          - name: MEDIAWIKI_DB_HOST
+            value: mysql
+          - name: MEDIAWIKI_DB_USER
+            value: mediawiki
+          - name: MEDIAWIKI_DB_PASSWORD
+            value: "B4teau123!"

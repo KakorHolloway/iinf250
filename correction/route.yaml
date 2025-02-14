@@ -1,0 +1,16 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: mediawiki
+spec:
+  host: mediawiki-correction.apps.openshift.kakor.ovh
+  port:
+    targetPort: 80
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: mediawiki
+    weight: 100
+  wildcardPolicy: None
