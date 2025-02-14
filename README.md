@@ -1,3 +1,5 @@
+# IINF250
+## Connection au cluster Openshift
 Pour vous connecter au cluster Openshift mis à disposition : 
 
 Téléchargez sur votre machine le paquet OKD suivant : 
@@ -12,6 +14,8 @@ Une fois authentifié (attention à ne pas recharger la page même si l'affichag
 Cliquez sur le lien Display Token et copiez dans votre terminal sur VScode la ligne de commande qui à été donné avec oc. 
 
 Pour vérifier que vous êtes authentifiés, lancez la commande ```oc get pod```
+
+## Création de l'environnement
 
 Une fois authentifiez, tentez de reproduire dans votre propre repo git l'architecture présentée en créant un fichier par objet Kubernetes. 
 
