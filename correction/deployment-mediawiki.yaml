@@ -29,4 +29,7 @@ spec:
           - name: MEDIAWIKI_DB_USER
             value: mediawiki
           - name: MEDIAWIKI_DB_PASSWORD
-            value: "B4teau123!"
+            valueFrom:
+              secretKeyRef:
+                name: password-mysql
+                key: password
