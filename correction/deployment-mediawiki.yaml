@@ -17,6 +17,8 @@ spec:
       containers:
       - name: mediawiki
         image: harbor.kakor.ovh/public/mediawiki:latest
+        securityContext:
+          allowPrivilegeEscalation: true
         ports:
         - containerPort: 80
         env:
