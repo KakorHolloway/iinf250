@@ -62,6 +62,8 @@ Afin de créer votre premier repo helm, vous pouvez utiliser la commande suivant
 helm create <nomdurepo>
 ```
 
+Une fois la chart helm générée, vous pouvez supprimer le contenu du dossier templates, et vider le contenu du fichier values.yaml
+
 Pendant la rédaction de la chart helm, vous pouvez utiliser la commande ```helm template monrepo monrepo/ -f monrepo/values.yaml``` pour vérifier le fonctionnement de votre chart. 
 
 Afin de commencer la mise en place de la chart de TP, l'on peut récupérer les fichier yaml présents dans le dossier correction. 

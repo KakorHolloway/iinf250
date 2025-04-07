@@ -1,0 +1,5 @@
+replica: 2
+port: false
+cm:
+  toto: tata
+  jojo: rabbit
