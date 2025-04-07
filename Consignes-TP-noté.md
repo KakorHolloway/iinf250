@@ -11,7 +11,7 @@ Mettez les fichiers de la correction dans le dossier templates.
 Voici le modifications que je souhaite avoir pour transformer ces fichiers en une chart helm utilisable :
 
 - Tous les objets Kubernetes doivent avoir un nom qui commence par les 6 premières lettres de votre déploiement (.Relaese.Name)
-- Je veux pouvoir personnaliser l'url de ma route tout en évitant que celle-ci ne finisse pas par ".apps.openshift.kakor.ovh"
+- Je veux pouvoir personnaliser l'url de ma route tout en évitant que celle-ci ne finisse pas par ".apps.openshift.kakor.ovh" (par exemple toto.toto.com ne doit pas fonctionner mais toto.apps.openshift.kakor.ovh oui) 
 - Je veux que mes déploiement possèdent des labels signifiant le type d'environnement qui sera utilisé (env), tout en permettant à l'utilisateur d'en ajouter au besoin. 
 - Je veux qu'à l'envie, l'utilisateur puisse créer ou non des volumes nfs. Ces volumes nfs montée sur le pod mysql sur /var/lib/mysql dépendent du server 192.168.1.56 et du path /Volume1/public/nfs-share-openshift/groupe-x
 - Je veux que la version et le nom de l'image soient varaibilisés
