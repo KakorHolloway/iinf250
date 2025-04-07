@@ -39,3 +39,29 @@ MYSQL_USER
 MYSQL_PASSWORD
 MYSQL_ROOT_PASSWORD
 ```
+
+## Installez Helm 
+
+Téléchargez le binaire pour votre machine (ex WIndows sur un CPU intel ou AMD) : https://get.helm.sh/helm-v3.17.2-windows-amd64.zip
+Pour les autres possibilités allez sur ce lien : https://github.com/helm/helm/releases/tag/v3.17.2
+
+Créez un dossier C:/exe, mettez dans ce dossier le fichier helm.exe présent dans l'archive. 
+
+Modifiez le path de votre windows via l'outil **Modifiier les Variables d'environnement système** (Variables d'environnement > Path (double click) > Nouveau et mettez C:\exe). 
+
+Enregistrez et quitter les modifications. 
+
+Pour vérifier que ça marche, réouvrez visual studio code ou une fenêtre Powershell pour tester d'exécuter des commandes ```helm --help```
+
+## Débutez dans Helm
+Lien vers la doc: 
+https://helm.sh/docs/chart_template_guide/builtin_objects/
+
+Afin de créer votre premier repo helm, vous pouvez utiliser la commande suivante :
+```
+helm create <nomdurepo>
+```
+
+Pendant la rédaction de la chart helm, vous pouvez utiliser la commande ```helm template monrepo monrepo/ -f monrepo/values.yaml``` pour vérifier le fonctionnement de votre chart. 
+
+Afin de commencer la mise en place de la chart de TP, l'on peut récupérer les fichier yaml présents dans le dossier correction. 
